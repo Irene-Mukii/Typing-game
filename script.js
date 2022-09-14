@@ -14,11 +14,12 @@ const quotes = [
 let words = [];
 let wordIndex = 0;
 
-let sartTime = Date.now();
+let startTime = Date.now();
 
 const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
+const elapsedTimeElement = document.getElementsByClassName('elapsed-time');
 
 //start logic
 
@@ -38,11 +39,15 @@ document.getElementById('start-btn').addEventListener('click', () => {
     const spanWords = words.map((word)=> {return `<span> ${word}</span`}); //an array to store each word from the quote  --we have added span elements to the wuote paragraph in html
     quoteElement.innerHTML = spanWords.join(' ');   //display the quote --needs a space as well to know what seperates diff indices
     quoteElement.childNodes[0].className = 'highlight'; //we give a class to the indexed span element
+    messageElement.innerHTML = ''; //clears any message
 
+    //setup the text box
+    //clears textbox
+    typedValueElement.value = '';
+    //sets focus???
+    typedValueElement.focus();
     
-    
 
-
-    
-
+    //starts the timer
+    startTime = new Date().getTime();
 })
