@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&display=swap');
 
-.highlight{
-    background-color: yellow;
-}
-
-.error{
-    background-color: lightcoral;
-    border: red;
-}
-
 h1 {
     font-family: 'Blaka Ink', cursive;
     font-size: 90px;
@@ -36,4 +27,13 @@ input{
     border-radius: 1rem;
     height: 3rem;
     /* display: none; */
+}
+
+.highlight{
+    background-color: yellow;
+}
+
+.error{
+    background-color: lightcoral;
+    border: red;
 }

@@ -35,22 +35,20 @@ document.getElementById('start-btn').addEventListener('click', () => {
     wordIndex = 0;  // --resets word index to 0 not sure id it is necessary, bit maybe we will be reducing array not just checking indexes.
 
     //UI updates
-    const spanWords = words.map(function (word) {return `<span> ${word}</span`});
-    console.log(spanWords.length)
-     //an array to store each word from the quote  --we have added span elements to the wuote paragraph in html --------------------------------------------------------------------------
+    const spanWords = words.map(function (word) {return `<span>${word} </span>`});
+    console.log( '39 ---- ' + spanWords.length)
+     //an array to store each word from the quote  --we have added span elements to the wuote paragraph in html 
      
-    quoteElement.innerHTML = spanWords.join(' ');  
-    console.log(quoteElement.childNodes.length)
+    quoteElement.innerHTML = spanWords.join('');  
     //display the quote --needs a space as well to know what seperates diff indices
     quoteElement.childNodes[0].className = 'highlight';
-    console.log(quoteElement.length)
     //we give a class to the indexed span element
     messageElement.innerHTML = ''; //clears any message
 
     //setup the text box
     //clears textbox
     typedValueElement.value = '';
-    //sets focus  --------------------------------------------------------------------------------------------------------------------------???
+    //sets focus  ??
     typedValueElement.focus();
     
     //starts the timer
@@ -83,13 +81,13 @@ typedValueElement.addEventListener('input', ()=>{
             
             console.log('Iam working' + quoteElement.childNodes.length + wordIndex)
         }
-        //-------------------------------------------------------------------------------------------------
+
         // highlight the new word
         quoteElement.childNodes[wordIndex].className = 'highlight';
         console.log(quoteElement.childNodes[wordIndex].className);
     }
     else if (currentWord.startsWith(typedValue)){
-        //currently correct   -----------------------------------------------------------------------------????
+        //currently correct   ????
         //highlight the next word
         typedValueElement.className = '';
     }else {
