@@ -27,15 +27,20 @@ document.getElementById('start-btn').addEventListener('click', () => {
 
     const quoteIndex = Math.floor(Math.random() * quotes.length);
     const quote = quotes[quoteIndex];
-    quoteElement.innerHTML = quote;
+    
 
-    //put quote intp an array of words
+    //put quote int0 an array of words
     words = quote.split(' '); //has to have a space so it splits when space is reached.
 
     wordIndex = 0;  // --resets word index to 0 not sure id it is necessary, bit maybe we will be reducing array not just checking indexes.
 
     //UI updates
-    //display the quote
+    const spanWords = words.map((word)=> {return `<span> ${word}</span`}); //an array to store each word from the quote  --we have added span elements to the wuote paragraph in html
+    quoteElement.innerHTML = spanWords.join(' ');   //display the quote --needs a space as well to know what seperates diff indices
+    quoteElement.childNodes[0].className = 'highlight'; //we give a class to the indexed span element
+
+    
+    
 
 
     
