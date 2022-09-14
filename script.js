@@ -19,3 +19,25 @@ let sartTime = Date.now();
 const quoteElement = document.getElementById('quote');
 const messageElement = document.getElementById('message');
 const typedValueElement = document.getElementById('typed-value');
+
+//start logic
+
+document.getElementById('start-btn').addEventListener('click', () => {
+    //get a quote at random from our array
+
+    const quoteIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[quoteIndex];
+    quoteElement.innerHTML = quote;
+
+    //put quote intp an array of words
+    words = quote.split(' '); //has to have a space so it splits when space is reached.
+
+    wordIndex = 0;  // --resets word index to 0 not sure id it is necessary, bit maybe we will be reducing array not just checking indexes.
+
+    //UI updates
+    //display the quote
+
+
+    
+
+})
