@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&display=swap');
+
 .highlight{
     background-color: yellow;
 }
@@ -5,4 +7,33 @@
 .error{
     background-color: lightcoral;
     border: red;
+}
+
+h1 {
+    font-family: 'Blaka Ink', cursive;
+    font-size: 90px;
+}
+body{
+    background-color:black;
+    color: rgb(90, 90, 55);
+    font-size: 2rem;
+    text-align: center;
+}
+.game-space{
+    display: inline-flex;
+    width: 40%;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+}
+.start-btn{
+    background-color: rgb(61, 59, 26);
+    border-radius: 1rem;
+    font-size: xx-large;
+}
+input{
+    font-size: x-large;
+    border-radius: 1rem;
+    height: 3rem;
+    /* display: none; */
 }
